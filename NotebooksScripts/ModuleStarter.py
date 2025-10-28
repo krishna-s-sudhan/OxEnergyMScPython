@@ -25,10 +25,15 @@ import pandas as pd
 # =============================================================================
 # Calculate PV array size function
 # =============================================================================
-
-def calc_pv_array_size(building_width, building_length,
-                       roof_angle, pv_width, pv_height,
-                       pv_power):
+    
+def calc_pv_array_size(building_width, building_length, roof_angle, pv_width, pv_height, pv_power): # <--- include parameters for building length, width, roof angle, panel width, panel height and panel power
+    building_width = ((building_width/2)/math.cos(math.radians(roof_angle))) # m
+    max_panels_length = math.floor(building_length/(panel_width/1000))
+    max_panels_width = math.floor(building_width/(panel_height/1000))
+    max_panels = max_panels_length*max_panels_width
+    max_power = max_panels*panel_power/1000
+    
+    return max_power,max_panels
     """
     This is a docstring. Use it to explain to the user what a function does.
     It will automatically be read by 'help' functions such as in spyder.

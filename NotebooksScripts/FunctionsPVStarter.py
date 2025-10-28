@@ -7,7 +7,7 @@ Learning objectives:
 
 Complete the script by filling in the missing code sections marked with <---.
 
-@author: PLACE YOUR NAME HERE
+@author: Krishna Skandha Sudhan
 """
 
 # Import any necessary libraries
@@ -17,14 +17,19 @@ import numpy as np
 import os
 
 # <--- Define a function to size a PV system based on building dimensions and panel specifications
-def calculate_pv_size(): # <--- include parameters for building length, width, roof angle, panel width, panel height and panel power
-    """
-    This is a docstring. Use it to describe the function's purpose, parameters, and return values.
-    """
+def calculate_pv_size(building_length, building_width, roof_angle, panel_width, panel_height, panel_power): # <--- include parameters for building length, width, roof angle, panel width, panel height and panel power
+    building_width = ((building_width/2)/math.cos(math.radians(roof_angle))) # m
+    max_panels_length = math.floor(building_length/(panel_width/1000))
+    max_panels_width = math.floor(building_width/(panel_height/1000))
+    max_panels = max_panels_length*max_panels_width
+    max_power = max_panels*panel_power/1000
+    
+    return max_power,max_panels
+    
 
 
 
-    return # <--- return the total PV capacity in kW and number of panels
+    # <--- return the total PV capacity in kW and number of panels
 
 if __name__ == "__main__":
     # =============================================================================
@@ -39,6 +44,7 @@ if __name__ == "__main__":
     # use the code.
     # =============================================================================
     
-    pv_capacity_kw, num_panels = # <--- call the calculate_pv_size function with appropriate arguments
+    pv_capacity_kw, num_panels = calculate_pv_size(30, 16, 22, 1690, 1046, 400)
+    # <--- call the calculate_pv_size function with appropriate arguments
 
-    print() # <--- Add a print statement to display the number of PV panels and the total PV capacity in kW
+    print(str(num_panels) +' panels and '+ str(pv_capacity_kw)+' kW max capacity') # <--- Add a print statement to display the number of PV panels and the total PV capacity in kW
