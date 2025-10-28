@@ -1,0 +1,7 @@
+Entity,Code,Year,wind_consumption_equivalent_twh,hydro_consumption_equivalent_twh,solar_consumption_equivalent_twh,nuclear_consumption_equivalent_twh,biofuels_consumption_twh,other_renewables_consumption_equivalent_twh,coal_consumption_twh,oil_consumption_twh,gas_consumption_twh
+Vietnam,VNM,2019,1.7920791,163.65593,11.925742,0,0,1.09375,580.6638,339.07135,98.43
+Vietnam,VNM,2020,2.4246914,179.9185,26.57037,0,0,1.0625,609.74115,307.2974,88.394005
+Vietnam,VNM,2021,8.229065,193.77586,64.41133,0,0,1,579.23285,288.10876,71.989
+Vietnam,VNM,2022,22.336609,235.65111,63.26781,0,0,1.18125,536.2906,337.13995,77.972
+Vietnam,VNM,2023,28.258537,196.6366,62.663414,0,0,2.7124999,632.7067,362.13962,72.05703
+Vietnam,VNM,2024,31.090244,216.39757,63.07805,0,0,3.225,693.43506,388.967,60.987614
